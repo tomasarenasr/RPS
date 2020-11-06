@@ -1,0 +1,161 @@
+body{
+    color: #2e2e2e;
+    font-family: arial;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content{
+    flex-grow: 1;
+    background-color: rgb(126, 181, 212);
+    margin: 60px 200px;
+    position: relative;
+}
+
+.wrapper {
+    text-align: center;
+    margin: 20px;
+ }
+
+ .wrap {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+header {
+    text-align: center;
+     margin-bottom: 50px;
+    font-family: cursive;
+}
+
+#header-1 {
+    margin-top: 200px;
+}
+
+#header-2 {
+    margin-top: 50px;
+}
+
+/* input {
+    border: 1px rounded #cccccc;
+    padding: 15px;
+    width: 250px;
+} */
+
+button {
+    align-items: center;
+    border: solid 2px black;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0px 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(56, 172, 52);
+}
+
+#restartButton {
+    background-color: dodgerblue;
+}
+
+button:hover {
+    color: black;
+}
+
+.button {
+    margin: 50px;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 20px;
+    padding: 5px;
+    color: rgb(22, 21, 21);
+    max-width: 700px;
+    margin: auto;
+    color:rgb(230, 220, 220);
+  }
+  
+  .score p:first-child {
+    background: #003699;
+  }
+  
+  .score p:last-child {
+    background: #333333;
+  }
+
+#messages { 
+    margin: 40px 0px;
+    font-size: 20px;
+}
+
+.imgBtn
+{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin: 20px 40px;
+}
+
+input:hover {
+    background-color: #333333;
+}
+
+#newGame {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+
+#gameID {
+    margin: 20px 20px;
+
+}
+
+#newGame:click {
+  display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+
+.imgBtn
+{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin: 20px 20px;
+}
+  }
+
+  .input-card {
+    width: 18em;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 2px solid rgb(56, 172, 52);
+    border-radius: 15px;
+}
+
+#game-buttons > button {
+    padding: 1em;
+    margin: 1em;
+    border: 2px solid gray;
+    background-color: rgb(95, 196, 36);
+    border-radius: 90px;
+}
+
+#game-buttons > button:hover {
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+    background-color: rgb(56, 172, 52);
+    transform: translateY(10px);
+}
+
+#game-buttons img {
+    width: 8em;
+    pointer-events: none; /* This prevents the img from being the target of a click. */
+}
