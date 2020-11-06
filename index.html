@@ -1,95 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <title>Rock Paper Scissors Game</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/style.css">
-  
-  
-  
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="./utils.js"></script>
-      </head>
 
-  <body>
-    <div class="main-content">
-      <!---Main Heading -->
-      <header id="header-2">
-        <h1>Rock, Paper, Scissors Game</h1>
-      </header>
+<head>
+  <title>Rock Paper Scissors Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./utils.js"></script>
+</head>
 
-         
-           <div>
-            <h2>Game ID: <span id="game-id"></span></h2>
-          </div> 
- 
+<body>
+  <div class="main-content">
+    <!---Main Heading -->
+    <header id="header-2">
+      <h1>Rock, Paper, Scissors Game</h1>
+    </header>
+    <div>
+      <h2>Game ID: <span id="game-id"></span></h2>
+    </div>
 
-    
-        <div class="wrap">
-          <!---------- CREATE GAME ---------->
-          <div class="input-card">
-            <h4>Create game</h4>
+    <div class="wrap">
+      <!---------- CREATE GAME ---------->
+      <div class="input-card">
 
-            <label for="create-nickname">Nickname:</label>
-            <input type="text" id="create-nickname" name="create-nickname">
-            <button id="create-btn">Create</button>
-        </div>
-
-          <!---------- JOIN GAME ---------->
-          <div class="input-card">
-            <h4>Join game</h4>
-            
-            <label for="join-nickname">Nickname:</label>
-            <input type="text" id="join-nickname" name="join-nickname">
-
-            <label for="join-id">Game ID:</label>
-            <input type="text" id="join-id" name="join-id">
-
-            <button id="join-btn">Join</button>
-        </div>
-
-
-
-
+        <label for="create-nickname">Host name:</label>
+        <input type="text" id="create-nickname" name="create-nickname">
+        <button id="create-btn">Create</button>
       </div>
 
-       
+      <!---------- JOIN GAME ---------->
+      <div class="input-card">
+        <label for="join-nickname">Guest name:</label>
+        <input type="text" id="join-nickname" name="join-nickname">
+        <label for="join-id">Game ID:</label>
+        <input type="text" id="join-id" name="join-id">
+        <button id="join-btn">Join</button>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div id="host-name">-</div>
+      <div>vs<span id="versus-img"></span></div>
+      <div id="guest-name">-</div>
+    </div>
+
+    <span id="your-choice">-</span>
+    <span id="versus-img"></span>
+    <span id="opponent-choice">-</span>
 
     <div class="wrapper">
-        
-
-
-         <div id="messages"> Choose your option! </div>
-            
-       <div id="game-container">
-
-
-      
-                    <div class="flex flex-center" id="game-buttons">
-                      <!-- 
-                      <input type="image"  class='imgBtn turn' id="rock-btn" src="images/rock.svg"> 
-                      <input type="image" class='imgBtn turn' id="paper-btn" src="images/paper.svg">
-                      <input type="image" class='imgBtn turn' id="scissors-btn"  src="images/scissors.svg">-->
-                  <!-- 
-
-                      <input type="image"  class='choice-btn' id="rock-btn" src="images/rock.svg">
-                      <input type="image" class='choice-btn' id="paper-btn" src="images/paper.svg">
-                      <input type="image" class='choice-btn' id="scissors-btn"  src="images/scissors.svg">
-                      -->
-                      
-                      <button id="rock-btn" class="choice-btn" value="rock"><img src="./images/rock.svg" width="130" height="130"></button>
-                      <button id="paper-btn" class="choice-btn" value="paper"><img src="./images/paper.svg" width="130" height="130"></button>
-                      <button id="scissors-btn" class="choice-btn" value="scissors"><img src="./images/scissors.svg" width="130" height="130"></button>
-
-                    </div>
-        </div>       
-
+      <div id="messages"> Choose your option! </div>
+      <div id="game-container">
+        <div class="flex flex-center" id="game-buttons">
+          <button id="rock-btn" class="choice-btn" value="rock"><img src="./images/rock.svg" width="130"
+              height="130"></button>
+          <button id="paper-btn" class="choice-btn" value="paper"><img src="./images/paper.svg" width="130"
+              height="130"></button>
+          <button id="scissors-btn" class="choice-btn" value="scissors"><img src="./images/scissors.svg" width="130"
+              height="130"></button>
+        </div>
       </div>
+    </div>
   </div>
-    
-</div>
 
-    
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  </body>
+  </div>
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
 </html>
